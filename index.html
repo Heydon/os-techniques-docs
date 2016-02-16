@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HUIT &quot;In Practice&quot; Styleguide</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#huit-in-practice-styleguide">HUIT &quot;In Practice&quot; Styleguide</a></li>
+    <li class="sidebar-header-2"><a href="#the-title">The title</a></li>
+    <li class="sidebar-header-2"><a href="#container">Container</a></li>
+    <li class="sidebar-header-2"><a href="#content">Content</a></li>
+    <li class="sidebar-header-3"><a href="#basic-example">Basic example</a></li>
+    <li class="sidebar-header-2"><a href="#supplementary-subsections">Supplementary subsections</a></li>
+    <li class="sidebar-header-3"><a href="#examples">Examples</a></li>
+    <li class="sidebar-header-4"><a href="#code-examples">Code examples</a></li>
+    <li class="sidebar-header-3"><a href="#code-editor">Code editor</a></li>
+    <li class="sidebar-header-3"><a href="#downloads">Downloads</a></li>
+    <li class="sidebar-header-2"><a href="#video">Video</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h1 id="huit-in-practice-styleguide"><a class="header-link" href="#huit-in-practice-styleguide"></a>HUIT &quot;In Practice&quot; Styleguide</h1>
+<p>This is a guide to writing and marking up &#39;techniques&#39; examples of accessibility best practice for the Open Scholar system.</p>
+<h2 id="the-title"><a class="header-link" href="#the-title"></a>The title</h2>
+<p>The title for the Technique page should follow this format:</p>
+<pre class="hljs"><code>✎ Technique: [<span class="hljs-property">name</span> <span class="hljs-keyword">of</span> technique]</code></pre><h2 id="container"><a class="header-link" href="#container"></a>Container</h2>
+<p>Each &#x201c;Technique&#x201d; instance should be wrapped in the following manner, where <code>[description]</code> should describe the technique in a couple of sentences and <code>[content]</code> is the body of the technique.</p>
+<pre class="hljs"><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"os-example"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"os-example_description"</span>&gt;
+    &lt;p&gt;[description]&lt;/p&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  [content]
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre><h2 id="content"><a class="header-link" href="#content"></a>Content</h2>
+<p>&#x201c;Technique&#x201d; instances are modular. A description for each is mandatory (see <code>[description]</code> above) and <em>can</em> constitute the entire instance <em>or</em> be followed by one or more subsections:</p>
+<ul class="list">
+<li><strong>Example(s)</strong> (code or writing style examples)</li>
+<li><strong>Code editor</strong> (an external link to a codePen demo followed by an embedded version of that codePen)</li>
+<li><strong>Video: <code>[video name]</code></strong> (A demonstration video, typically showing the technique as operated by a screen reader)</li>
+<li><strong>Download</strong> (a zipped package of reusable code or other resource)</li>
+</ul>
+<h3 id="basic-example"><a class="header-link" href="#basic-example"></a>Basic example</h3>
+<p>Here&#39;s a really simple instance which just uses the description field as its content:</p>
+<pre class="hljs"><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"os-example"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"os-example_description"</span>&gt;
+    &lt;p&gt;When writing <span class="hljs-keyword">copy</span>, consider your audience <span class="hljs-keyword">and</span> <span class="hljs-keyword">try</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">to</span> alienate anyone. The key <span class="hljs-property">word</span> <span class="hljs-keyword">is</span> <span class="hljs-string">"short"</span>: Use short <span class="hljs-property">paragraphs</span> <span class="hljs-keyword">with</span> short sentences <span class="hljs-keyword">and</span>, <span class="hljs-keyword">where</span> possible, short <span class="hljs-property">words</span>. Don't <span class="hljs-command">say</span> anything <span class="hljs-keyword">that</span> doesn't need <span class="hljs-keyword">to</span> be said.&lt;/p&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre><h2 id="supplementary-subsections"><a class="header-link" href="#supplementary-subsections"></a>Supplementary subsections</h2>
+<p>Each of the optional subsections should start with an <code>&lt;h3&gt;</code>. This <code>&lt;h3&gt;</code> takes the <code>os-expandable</code> class, making it an expandable &#39;accordion&#39; section with a supplied script. Hypothetically, we could extend the &quot;Copy&quot; example above with a download section:</p>
+<pre class="hljs"><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"os-example"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"os-example_description"</span>&gt;
+    &lt;p&gt;When writing <span class="hljs-keyword">copy</span>, consider your audience <span class="hljs-keyword">and</span> <span class="hljs-keyword">try</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">to</span> alienate anyone. The key <span class="hljs-property">word</span> <span class="hljs-keyword">is</span> <span class="hljs-string">"short"</span>: Use short <span class="hljs-property">paragraphs</span> <span class="hljs-keyword">with</span> short sentences <span class="hljs-keyword">and</span>, <span class="hljs-keyword">where</span> possible, short <span class="hljs-property">words</span>. Don't <span class="hljs-command">say</span> anything <span class="hljs-keyword">that</span> doesn't need <span class="hljs-keyword">to</span> be said.&lt;/p&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;h3 <span class="hljs-type">class</span>=<span class="hljs-string">"os-expandable"</span>&gt;Download&lt;/h3&gt;
+  &lt;p&gt;&lt;a href=<span class="hljs-string">"path/to/writing-guide.pdf"</span>&gt;How To Make Yourself Understood (pdf)&lt;/a&gt;&lt;/p&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre><p>(<strong>Note:</strong> Heading terminology for subsections should be consistent: Always one of &quot;Example(s)&quot;, &quot;Video: <code>[video title]</code>&quot;, &quot;Download&quot;, &quot;Code editor&quot;.)</p>
+<h3 id="examples"><a class="header-link" href="#examples"></a>Examples</h3>
+<p>When including an examples subsection, you have the option of including good and bad examples, indicated using &quot;tick&quot; and &quot;cross&quot; unicode symbols, like so:</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"os-expandable"</span>&gt;</span>Examples<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"os-example_bad"</span>&gt;</span>&amp;#x2717;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> Bad example<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- describe the bad example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"os-example_good"</span>&gt;</span>&amp;#x2713;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> Good example<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- describe the good example --&gt;</span></code></pre><h4 id="code-examples"><a class="header-link" href="#code-examples"></a>Code examples</h4>
+<p>To include a code block, you should wrap them in a <code>&lt;pre&gt;</code> tag containing an inline <code>&lt;code&gt;</code> tag. The &#39;less than&#39; symbols of HTML examples should be encoded or the example will be treated as actual HTML.</p>
+<pre class="hljs"><code><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"path/to/image.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Your alternative text."</span><span class="hljs-value">&amp;gt;</span>
+&lt;/<span class="hljs-attribute">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span></span></code></pre><p>For inline code examples, just use <code>&lt;code&gt;&lt;!-- code here --&gt;&lt;/code&gt;</code>.</p>
+<h3 id="code-editor"><a class="header-link" href="#code-editor"></a>Code editor</h3>
+<p>Some code &mdash; especially that with javascript functionality &mdash; is better sandboxed for the reader to explore and test. For this, we are using the <a href="http://codepen.io">jsBin</a> service. The format is to include a link to the relevant jsBin URL.</p>
+<pre class="hljs"><code>&lt;<span class="hljs-tag">h3</span> class=<span class="hljs-string">"os-expandable"</span>&gt;Code editor&lt;/h3&gt;
+&lt;p&gt;A <span class="hljs-tag">code</span> editor is available to &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"http://jsbin.com/rerecen/1/edit?html,css,output"</span>&gt;explore and test three acceptable methods <span class="hljs-keyword">for</span> employing <span class="hljs-attribute">icon</span> fonts accessibly&lt;/a&gt;.&lt;/p&gt;</code></pre><p>(<strong>Note:</strong> You can log in to jsBin and make code demos using harvardonlineaccessibility@gmail.com&#39;s Github account.)</p>
+<h3 id="downloads"><a class="header-link" href="#downloads"></a>Downloads</h3>
+<p>In some cases, it may be beneficial to attach a resource for the reader to download. This may be a document which describes or supplements the &quot;in practice&quot; instance or some library code for reuse. The structure should follow that below. Note the <code>download</code> attribute which improves the downloading interface in supporting browsers.</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"os-expandable"</span>&gt;</span>Download<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"path/to/a11yExpandable.zip"</span> <span class="hljs-attribute">download</span>&gt;</span>Expandable region jQuery plugin (zip)<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre><h2 id="video"><a class="header-link" href="#video"></a>Video</h2>
+<p>In some cases, a video might be appropriate for clarifying something. For example, how something works in a screen reader. Videos <em>must</em> contain captions for the hard of hearing, as in <a href="https://www.youtube.com/watch?v=ZvLicPjvvdg">this technique describing how to write captions</a>.</p>
+<p>The Video section should be titled &quot;Video: <code>[name of video]</code>&quot; where <code>[name of video]</code> is equal to the video&#39;s name on Youtube. For example: &quot;Video: Writing closed captions&quot;. To upload and caption videos, use the harvardonlineaccessibility@gmail.com youtube account, which has the same password as the Github account.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
